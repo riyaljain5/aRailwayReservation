@@ -1,0 +1,106 @@
+<html>
+<head>
+<title>railway booking</title>
+<style type="text/css">
+label
+{
+width:100px;
+height:40px;
+display:inline-block;
+}
+#form{
+border-radius:10px;
+background:black;
+color:white;
+width:290px;
+padding:4px;
+}
+h2{
+text-align:center;
+}
+body
+{
+background:linear-gradient(red,blue);
+}
+</style>
+
+
+</head>
+
+
+<body bgcolor="white">
+
+<table border="0" width="100%" bgcolor="red" height="8%">
+<tr>
+<th width="20%"><font color="white" size="4"><a href="Image.html">HOME </a> </font></th>
+<th width="20%"><font color="white" size="4"><a href="#"> REGISTER</a> </font></th>
+<th width="20%"><font color="white" size="4"><a href="#"> LOGIN </a></font></th>
+<th width="20%"><font color="white" size="4"> <a href="BookTicket.html">BOOK TICKET </a></font></th>
+</tr>
+</table>
+<left><marquee direction="up" size="12" style="color:navy"><h1><center>Online Railway Ticket Booking</h1></left></marquee></font>
+
+
+<table border="0" bgcolor="black" align="center"cellspacing="20">
+<h2 style="text-align:left;color:blue">Book Ticket</h2>
+<align="center">
+<tr><td>
+<label>From</label>
+<select id="From">
+<option>  From  </option>
+<option value="Delhi">Delhi</option>
+<option value="Mumbai">Mumbai</option>
+<option value="Pune">Pune</option>
+<option value="Indore">Indore</option>
+<option value="Kalyan">Chennai</option>
+<option value="Kolkata">Kolkata</option>
+<option value="jaipur">jaipur</option>
+<option value="Surat">Surat</option>
+<option value="Hyderabad">Hyderabad</option>
+
+</select><br></tr></td>
+<tr><td>
+<label>To</label>
+<select name="select">
+<option>  To  </option>
+<option value="Delhi">Delhi</option>
+<option value="Mumbai">Mumbai</option>
+<option value="Pune">Pune</option>
+<option value="Indore">Indore</option>
+<option value="Kalyan">Chennai</option>
+<option value="Kolkata">Kolkata</option>
+<option value="jaipur">jaipur</option>
+<option value="Surat">Surat</option>
+<option value="Hyderabad">Hyderabad</option>
+
+</select></tr></td><br>
+<label>Date</label>
+<input type="date"id="d1"name="dt1"><br>
+
+<tr><td>
+<label>All Classes</label>
+<select name="select">
+<option>  All Classes  </option>
+<option value="All Classes">All Classes</option>
+<option value="Mumbai">AC First Class(1A)</option>
+<option value="Pune">AC2 tier(2A)</option>
+<option value="Indore">First Class(FC)</option>
+<option value="Kalyan">AC 3 Tier(3A)</option>
+<option value="Kolkata">AC 3 Economy(3E)</option>
+<option value="jaipur">AC chair car(CC)</option>
+<option value="Surat">Sleeper(SL)</option>
+<option value="Hyderabad">Second Sitting(2s)</option>
+</select></tr></td><br>
+
+<label>General</label>
+<select name="select">
+<option>  General  </option>
+<option value="General">General</option>
+<option value="Ladies">Ladies</option>
+<option value="Lower Berth">Lower Berth/Sr Citizen</option>
+<option value="Divyaang">Divyaang</option>
+</select></tr></td><br>
+</table>
+
+</body>
+</html>

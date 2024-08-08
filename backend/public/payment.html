@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Payment</title>
+<style>
+table {
+    color: white;
+    border-radius: 20px;
+}
+#button {
+    background-color: green;
+    color: white;
+    height: 32px;
+    width: 85px;
+    border-radius: 25px;
+}
+body {
+    background: linear-gradient(red, blue);
+}
+</style>
+</head>
+<body>
+<table border="0" width="100%" bgcolor="red" height="8%">
+<tr>
+    <th width="20%"><font color="white" size="4"><a href="Image.html">HOME </a></font></th>
+    <th width="20%"><font color="white" size="4"><a href="customer.html">CUSTOMER DETAILS</a></font></th>
+    <th width="20%"><font color="white" size="4"><a href="bookticket.html">BOOK TICKET</a></font></th>
+    <th width="20%"><font color="white" size="4"><a href="payment.html">PAYMENT</a></font></th>
+</tr>
+</table>
+
+<table border="0" bgcolor="black" align="center" cellspacing="20">
+<left><marquee direction="up" size="12" style="color:blue"><h1><center>Payment</h1></left></marquee></font>
+<form action="http://localhost:3000/payment" method="POST">
+<tr>
+    <td>Gateway</td>
+    <td>
+        <select name="gateway" required>
+            <option value="">Select</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Debit Card">Debit Card</option>
+            <option value="Paytm">Paytm</option>
+            <option value="Phone Pay">Phone Pay</option>
+            <option value="Google Pay">Google Pay</option>
+            <option value="UPI">UPI</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td>Enter Card No.</td>
+    <td><input type="text" name="cardNumber" required></td>
+</tr>
+<tr>
+    <td>CVC Number</td>
+    <td><input type="text" name="cvcNumber" required></td>
+</tr>
+<tr>
+    <td>Price</td>
+    <td><input type="number" name="price" required></td>
+</tr>
+<tr>
+    <td colspan="2" bgcolor="black"><button type="submit" id="button">PAY</button></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

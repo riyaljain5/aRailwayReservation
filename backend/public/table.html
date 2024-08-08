@@ -1,0 +1,215 @@
+
+<!DOCTYPE HTML>
+<html>
+<title>Train Booking</title>
+<head>
+<style>
+table {
+    color: white;
+    border-radius: 20px;
+}
+body {
+    background: linear-gradient(red, blue);
+}
+</style>
+</head>
+<body>
+
+<table border="0" width="100%" bgcolor="red" height="8%">
+<tr>
+    <th width="20%"><font color="white" size="4"><a href="Image.html">HOME</a></font></th>
+    <th width="20%"><font color="white" size="4"><a href="customer.html">CUSTOMER DETAILS</a></font></th>
+    <th width="20%"><font color="white" size="4"><a href="bookticket.html">BOOK TICKET</a></font></th>
+    <th width="20%"><font color="white" size="4"><a href="payment.html">PAYMENT</a></font></th>
+</tr>
+</table>
+
+<marquee direction="up" size="12" style="color: navy">
+    <h1><center>Available Trains</center></h1>
+</marquee>
+
+<table>
+
+    <tr>
+        <th bgcolor="black">Sr no</th>
+        <th bgcolor="black">Train No</th>
+        <th bgcolor="black">Train name</th>
+        <th bgcolor="black">Arrival</th>
+        <th bgcolor="black">Departure</th>
+        <th bgcolor="black">Price</th>
+        <th bgcolor="black">Action</th>
+    </tr>
+
+    <tr>
+        <td bgcolor="black">1</td>
+        <td bgcolor="black">18130</td>
+        <td bgcolor="black">Shatabdi Express</td>
+        <td bgcolor="black">01:45</td>
+        <td bgcolor="black">02:15</td>
+        <td bgcolor="black">300</td>
+        <td bgcolor="black">
+            <form onsubmit="bookTrain(event, '18130', 'Shatabdi Express', '01:45', '02:15', '300')">
+                <input type="hidden" name="trainNo" value="18130">
+                <input type="hidden" name="trainName" value="Shatabdi Express">
+                <input type="hidden" name="arrival" value="01:45">
+                <input type="hidden" name="departure" value="02:15">
+                <input type="hidden" name="price" value="300">
+                <button type="submit">BOOK</button>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td bgcolor="black">2</td>
+        <td bgcolor="black">12723</td>
+        <td bgcolor="black">Chetak Express</td>
+        <td bgcolor="black">05:45</td>
+        <td bgcolor="black">07:45</td>
+        <td bgcolor="black">200</td>
+        <td bgcolor="black">
+            <form onsubmit="bookTrain(event, '12723', 'Chetak Express', '05:45', '07:45', '200')">
+                <input type="hidden" name="trainNo" value="12723">
+                <input type="hidden" name="trainName" value="Chetak Express">
+                <input type="hidden" name="arrival" value="05:45">
+                <input type="hidden" name="departure" value="07:45">
+                <input type="hidden" name="price" value="200">
+                <button type="submit">BOOK</button>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td bgcolor="black">3</td>
+        <td bgcolor="black">12723</td>
+        <td bgcolor="black">Andhra Pradesh Express</td>
+        <td bgcolor="black">10:30</td>
+        <td bgcolor="black">12:30</td>
+        <td bgcolor="black">320</td>
+        <td bgcolor="black">
+            <form onsubmit="bookTrain(event, '12723', 'Andhra Pradesh Express', '10:30', '12:30', '320')">
+                <input type="hidden" name="trainNo" value="12723">
+                <input type="hidden" name="trainName" value="Andhra Pradesh Express">
+                <input type="hidden" name="arrival" value="10:30">
+                <input type="hidden" name="departure" value="12:30">
+                <input type="hidden" name="price" value="320">
+                <button type="submit">BOOK</button>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td bgcolor="black">4</td>
+        <td bgcolor="black">19420</td>
+        <td bgcolor="black">Adi Chennai Express</td>
+        <td bgcolor="black">03:40</td>
+        <td bgcolor="black">05:15</td>
+        <td bgcolor="black">400</td>
+        <td bgcolor="black">
+            <form onsubmit="bookTrain(event, '19420', 'Adi Chennai Express', '03:40', '05:15', '400')">
+                <input type="hidden" name="trainNo" value="19420">
+                <input type="hidden" name="trainName" value="Adi Chennai Express">
+                <input type="hidden" name="arrival" value="03:40">
+                <input type="hidden" name="departure" value="05:15">
+                <input type="hidden" name="price" value="400">
+                <button type="submit">BOOK</button>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td bgcolor="black">5</td>
+        <td bgcolor="black">12434</td>
+        <td bgcolor="black">Chennai Rajdhani</td>
+        <td bgcolor="black">09:00</td>
+        <td bgcolor="black">11:15</td>
+        <td bgcolor="black">250</td>
+        <td bgcolor="black">
+            <form onsubmit="bookTrain(event, '12434', 'Chennai Rajdhani', '09:00', '11:15', '250')">
+                <input type="hidden" name="trainNo" value="12434">
+                <input type="hidden" name="trainName" value="Chennai Rajdhani">
+                <input type="hidden" name="arrival" value="09:00">
+                <input type="hidden" name="departure" value="11:15">
+                <input type="hidden" name="price" value="250">
+                <button type="submit">BOOK</button>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td bgcolor="black">6</td>
+        <td bgcolor="black">12639</td>
+        <td bgcolor="black">Brindavan Express</td>
+        <td bgcolor="black">04:45</td>
+        <td bgcolor="black">06:35</td>
+        <td bgcolor="black">400</td>
+        <td bgcolor="black">
+            <form onsubmit="bookTrain(event, '12639', 'Brindavan Express', '04:45', '06:35', '400')">
+                <input type="hidden" name="trainNo" value="12639">
+                <input type="hidden" name="trainName" value="Brindavan Express">
+                <input type="hidden" name="arrival" value="04:45">
+                <input type="hidden" name="departure" value="06:35">
+                <input type="hidden" name="price" value="400">
+                <button type="submit">BOOK</button>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td bgcolor="black">7</td>
+        <td bgcolor="black">11091</td>
+        <td bgcolor="black">Bhuj Pune Express</td>
+        <td bgcolor="black">12:45</td>
+        <td bgcolor="black">01:15</td>
+        <td bgcolor="black">400</td>
+        <td bgcolor="black">
+            <form onsubmit="bookTrain(event, '11091', 'Bhuj Pune Express', '12:45', '01:15', '400')">
+                <input type="hidden" name="trainNo" value="11091">
+                <input type="hidden" name="trainName" value="Bhuj Pune Express">
+                <input type="hidden" name="arrival" value="12:45">
+                <input type="hidden" name="departure" value="01:15">
+                <input type="hidden" name="price" value="400">
+                <button type="submit">BOOK</button>
+            </form>
+        </td>
+    </tr>
+    <!-- End of repeated block -->
+
+</table>
+
+<script>
+function bookTrain(event, trainNo, trainName, arrival, departure, price) {
+    event.preventDefault();
+
+    const trainData = {
+        trainNo,
+        trainName,
+        arrival,
+        departure,
+        price
+    };
+
+    fetch('http://localhost:3000/saveTrainData', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(trainData)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json(); // Expect JSON response
+    })
+    .then(data => {
+        alert('Booking successful!');
+        console.log('Success:', data);
+    })
+    .then(data => {
+        window.location.href = 'payment.html';
+    })
+    .catch((error) => {
+        alert('Booking failed!');
+        console.error('Error:', error);
+    });
+}
+
+
+</script>
+
+</body>
+</html> 

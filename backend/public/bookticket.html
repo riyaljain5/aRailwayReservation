@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Railway Booking</title>
+    <style>
+        table {
+            color: white;
+            border-radius: 20px;
+        }
+        #button {
+            background-color: green;
+            color: white;
+            height: 32px;
+            width: 85px;
+            border-radius: 25px;
+        }
+        body {
+            background: linear-gradient(red, blue);
+        }
+    </style>
+</head>
+<body>
+    <table border="0" width="100%" bgcolor="red" height="8%">
+        <tr>
+            <th width="20%"><font color="white" size="4"><a href="Image.html">HOME</a></font></th>
+            <th width="20%"><font color="white" size="4"><a href="customer.html">CUSTOMER DETAILS</a></font></th>
+            <th width="20%"><font color="white" size="4"><a href="bookticket.html">BOOK TICKET</a></font></th>
+        </tr>
+    </table>
+
+    <table border="0" bgcolor="black" align="center" cellspacing="20" width="900">
+        <marquee direction="up" style="color: yellow"><h1><center>Book Your Ticket</h1></marquee>
+
+        <form action="http://localhost:3000/book" method="post">
+            <input type="hidden" name="userId" value="USER_ID_PLACEHOLDER">
+
+            <tr>
+                <td>From</td>
+                <td>
+                    <select name="from" required>
+                        <option>From</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Indore">Indore</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Surat">Surat</option>
+                        <option value="Ajmer">Ajmer</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Ahmadnagar">Ahmadnagar</option>
+                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Amaravati">Amaravati</option>
+                        <option value="Bandra">Bandra</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Brindavan">Brindavan</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>To</td>
+                <td>
+                    <select name="to" required>
+                        <option>To</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Indore">Indore</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Surat">Surat</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Ahmadnagar">Ahmadnagar</option>
+                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Amaravati">Amaravati</option>
+                        <option value="Bandra">Bandra</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Brindavan">Brindavan</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Classes</td>
+                <td>
+                    <select name="class" required>
+                        <option>All Classes</option>
+                        <option value="AC First Class(1A)">AC First Class(1A)</option>
+                        <option value="AC2 tier(2A)">AC2 tier(2A)</option>
+                        <option value="First Class(FC)">First Class(FC)</option>
+                        <option value="AC 3 Tier(3A)">AC 3 Tier(3A)</option>
+                        <option value="AC 3 Economy(3E)">AC 3 Economy(3E)</option>
+                        <option value="AC chair car(CC)">AC chair car(CC)</option>
+                        <option value="Sleeper(SL)">Sleeper(SL)</option>
+                        <option value="Second Sitting(2s)">Second Sitting(2s)</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Quota</td>
+                <td>
+                    <select name="quota" required>
+                        <option>General</option>
+                        <option value="General">General</option>
+                        <option value="Ladies">Ladies</option>
+                        <option value="Lower Berth">Lower Berth/Sr Citizen</option>
+                        <option value="Divyaang">Divyaang</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Date</td>
+                <td><input type="date" id="d1" name="date" required></td>
+            </tr>
+
+            <tr>
+                <td><h4>ADULT PASSENGER DETAILS</h4></td>
+            </tr>
+            <tr>
+                <td>Adult Passenger</td>
+                <td>
+                    <select id="select" name="adultPassengers" required>
+                        <option></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><h4>CHILD PASSENGER DETAILS</h4></td>
+            </tr>
+            <tr>
+                <td>Child Passenger</td>
+                <td>
+                    <select id="select" name="childPassengers" required>
+                        <option></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+        </form>
+    </table>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const userId = urlParams.get('userId');
+            if (userId) {
+                document.querySelector('input[name="userId"]').value = userId;
+            }
+        });
+    </script>
+</body>
+</html>
